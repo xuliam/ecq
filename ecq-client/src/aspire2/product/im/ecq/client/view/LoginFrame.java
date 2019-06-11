@@ -5,15 +5,10 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-import javax.swing.JButton;
-import javax.swing.JCheckBox;
-import javax.swing.JComboBox;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JLayeredPane;
-import javax.swing.JPanel;
-import javax.swing.JPasswordField;
+import javax.swing.*;
 
 /**
  * TODO
@@ -69,6 +64,8 @@ public class LoginFrame extends JFrame{
 		configureHeadLabel();
 		
 		installComponents();
+
+		installListener();
 	}
 	
 
@@ -121,12 +118,12 @@ public class LoginFrame extends JFrame{
 		registeButton.setForeground(textColor);
 		registeButton.setFont(textFont);
 	}
-	
+
 	public void configureHeadLabel() {
 		headLabel.setBounds(170,80,65,65);
 		headLabel.setOpaque(true);
 		headLabel.setBackground(Color.RED);
-		
+
 	}
 	
 	public void installComponents() {
@@ -141,9 +138,31 @@ public class LoginFrame extends JFrame{
 	}
 	
 	
-	
+	public void installListeners(){
+		registeButton.addActionListener(new RegisteHandler());
+		loginButton.addActionListener(new LoginHandler());
+		}
+
+
+	}
+
+	private class RegisteHandler implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent e){
+
+		}
+	}
+
+	private class LoginHandler implements ActionListener{
+		@Override
+		public void actionPerformed(ActionEvent e){
+
+		}
+
+	}
+
 	public static void main(String[] args) {
 		new LoginFrame();
-		
 	}
 }
