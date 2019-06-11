@@ -65,7 +65,7 @@ public class LoginFrame extends JFrame{
 		
 		installComponents();
 
-		installListener();
+		installListeners();
 	}
 	
 
@@ -144,25 +144,25 @@ public class LoginFrame extends JFrame{
 		}
 
 
-	}
 
-	private class RegisteHandler implements ActionListener{
+
+	private class RegisteHandler implements ActionListener {
 
 		@Override
-		public void actionPerformed(ActionEvent e){
-
+		public void actionPerformed(ActionEvent e) {
+			new RegisteFrame();
 		}
 	}
-
-	private class LoginHandler implements ActionListener{
+	private class LoginHandler implements ActionListener {
 		@Override
-		public void actionPerformed(ActionEvent e){
+		public void actionPerformed(ActionEvent e) {
 
 		}
 
 	}
-
 	public static void main(String[] args) {
 		new LoginFrame();
 	}
 }
+
+
