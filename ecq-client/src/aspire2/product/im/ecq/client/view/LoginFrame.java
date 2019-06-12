@@ -27,7 +27,7 @@ public class LoginFrame extends JFrame{
 	private JCheckBox rememberCheckBox = new JCheckBox("Remember PW");
 	private JButton findButton = new JButton("Forget My Password");
 	private JButton loginButton = new JButton("Login");
-	private JButton registeButton = new JButton("Registe");
+	private JButton registeButton = new JButton("Register");
 	private JButton loginCode = new JButton();
 	private JLabel headLabel = new JLabel();
 	private Color textColor = new Color(166,166,166);
