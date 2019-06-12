@@ -4,7 +4,10 @@ import javax.swing.*;
 
 public class RegisteFrame extends JFrame {
 
-    public RegisteFrame(){
+    private LoginFrame loginFrame;
+
+    public RegisteFrame(LoginFrame frame){
+        this.loginFrame = frame;
         init();
         setVisible(true);
     }

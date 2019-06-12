@@ -150,7 +150,8 @@ public class LoginFrame extends JFrame{
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			new RegisteFrame();
+			LoginFrame.this.setVisible(false);
+			new RegisteFrame(LoginFrame.this);
 		}
 	}
 	private class LoginHandler implements ActionListener {
