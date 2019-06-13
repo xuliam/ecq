@@ -1,6 +1,8 @@
 
 package aspire2.product.im.ecq.client.view;
 
+import org.w3c.dom.Text;
+
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -62,12 +64,12 @@ public class LoginFrame extends JFrame{
 		configureRegisteButton();
 		
 		configureHeadLabel();
-		
+
 		installComponents();
 
 		installListeners();
 	}
-	
+
 
 
 	public void configureLoginPanel() {
@@ -136,8 +138,8 @@ public class LoginFrame extends JFrame{
 		contentPanel.add(loginPanel, BorderLayout.SOUTH);
 		getLayeredPane().add(headLabel, JLayeredPane.DEFAULT_LAYER);
 	}
-	
-	
+
+
 	public void installListeners(){
 		registeButton.addActionListener(new RegisteHandler());
 		loginButton.addActionListener(new LoginHandler());
@@ -161,8 +163,12 @@ public class LoginFrame extends JFrame{
 		}
 
 	}
+
 	public static void main(String[] args) {
+
 		new LoginFrame();
+
+
 	}
 }
 
