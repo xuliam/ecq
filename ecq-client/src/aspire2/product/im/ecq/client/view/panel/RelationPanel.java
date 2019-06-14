@@ -3,7 +3,7 @@ package aspire2.product.im.ecq.client.view.panel;
 import javax.swing.*;
 import java.awt.*;
 
-public class RelationPanel extends JFrame {
+public class RelationPanel extends JPanel {
     private JLabel headLabel = new JLabel();
     private JLabel nicknameLabel = new JLabel();
     private JLabel signatureLabel = new JLabel();

@@ -49,7 +49,7 @@ public class MainFrame extends JFrame {
     public void configureRelationListPanel() {
 
         relationListPanel.setLayout(new FlowLayout(FlowLayout.LEFT));
-        relationListPanel.setBackground(Color.YELLOW);
+        relationListPanel.setBackground(Color.CYAN);
         relationListPanel.add(new RelationPanel());
     }
 
@@ -94,7 +94,7 @@ public class MainFrame extends JFrame {
 
     public static void main(String[] args) {
         new MainFrame();
-        System.out.println("why");
+        //System.out.println("why");
 
     }
 }
