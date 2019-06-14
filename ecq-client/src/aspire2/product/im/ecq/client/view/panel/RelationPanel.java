@@ -9,6 +9,7 @@ public class RelationPanel extends JFrame {
     private JLabel signatureLabel = new JLabel();
 
     public RelationPanel(){
+
         init();
     }
 
@@ -21,16 +22,16 @@ public class RelationPanel extends JFrame {
 
     }
 
-    public void installComponents() {
-        add(headLabel,BorderLayout.WEST);
-    }
 
     public void configureHeadLabel() {
         //边框布局
         headLabel.setPreferredSize(new Dimension(45,45));
         headLabel.setOpaque(true);
         headLabel.setBackground(Color.DARK_GRAY);
-        RelationPanel relationPanel = new RelationPanel();
 
     }
+    public void installComponents() {
+        add(headLabel,BorderLayout.WEST);
+    }
+
 }
