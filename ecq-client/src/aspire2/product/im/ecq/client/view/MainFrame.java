@@ -43,7 +43,7 @@ public class MainFrame extends JFrame {
         configureRelationListPanel();
         mainPanel.setLayout(new BorderLayout());
         mainPanel.setBackground(Color.CYAN);
-        //?
+
     }
 
     public void configureRelationListPanel() {
@@ -51,6 +51,7 @@ public class MainFrame extends JFrame {
         relationListPanel.setLayout(new FlowLayout(FlowLayout.LEFT));
         relationListPanel.setBackground(Color.CYAN);
         relationListPanel.add(new RelationPanel());
+        relationListPanel.add(new RelationPanel());relationListPanel.add(new RelationPanel());relationListPanel.add(new RelationPanel());
     }
 
     public void configureSearchField() {
