@@ -1,5 +1,6 @@
 package aspire2.product.im.ecq.client.view;
 
+import aspire2.product.im.ecq.client.view.panel.RelationListPanel;
 import aspire2.product.im.ecq.client.view.panel.RelationPanel;
 
 import javax.swing.*;
@@ -18,7 +19,7 @@ public class MainFrame extends JFrame {
     private JLabel signatureLabel = new JLabel();
     private JPanel mainPanel = new JPanel();
     //联系人列表
-    private JPanel relationListPanel = new JPanel();
+    private JPanel relationListPanel = new RelationListPanel();
     private JTextField searchField = new JTextField();
 
     public MainFrame(){
@@ -40,19 +41,19 @@ public class MainFrame extends JFrame {
 
     public void configureMainPanel() {
         configureSearchField();
-        configureRelationListPanel();
+   //     configureRelationListPanel();
         mainPanel.setLayout(new BorderLayout());
         mainPanel.setBackground(Color.CYAN);
 
     }
 
-    public void configureRelationListPanel() {
-
-        relationListPanel.setLayout(new FlowLayout(FlowLayout.LEFT));
-        relationListPanel.setBackground(Color.CYAN);
-        relationListPanel.add(new RelationPanel());
-        relationListPanel.add(new RelationPanel());relationListPanel.add(new RelationPanel());relationListPanel.add(new RelationPanel());
-    }
+//    public void configureRelationListPanel() {
+//
+//        relationListPanel.setLayout(new FlowLayout(FlowLayout.LEFT));
+//        relationListPanel.setBackground(Color.CYAN);
+//        relationListPanel.add(new RelationPanel());
+//        relationListPanel.add(new RelationPanel());relationListPanel.add(new RelationPanel());relationListPanel.add(new RelationPanel());
+//    }
 
     public void configureSearchField() {
         searchField.setPreferredSize(new Dimension(0,30));
@@ -89,7 +90,7 @@ public class MainFrame extends JFrame {
         contentPanel.add(personalPanel, BorderLayout.NORTH);
         personalPanel.add(nicknameLabel);
         mainPanel.add(searchField, BorderLayout.NORTH);
-        mainPanel.add(relationListPanel, BorderLayout.CENTER);
+        mainPanel.add(new JScrollPane(relationListPanel), BorderLayout.CENTER);
         contentPanel.add(mainPanel,BorderLayout.CENTER);
     }
 
